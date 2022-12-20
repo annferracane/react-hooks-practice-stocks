@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from "react";
 import Stock from "./Stock";
 
-function StockContainer( { buyStock } ) {
+function StockContainer( {}) {
 
   const baseURL = "http://localhost:3001/stocks";
   const [stocks, setStocks] = useState([]);
@@ -13,7 +13,7 @@ function StockContainer( { buyStock } ) {
     .catch(e => console.log(e));
   },[]);
 
-  const stockArray = stocks.map(stock => <Stock key={ stock.id } stock={ stock } buyStock={ buyStock }/>);
+  const stockArray = stocks.map(stock => <Stock key={ stock.id } stock={ stock }/>);
 
   return (
     <div>

@@ -13,7 +13,7 @@ function StockContainer( { buyStock } ) {
     .catch(e => console.log(e));
   },[]);
 
-  const stockArray = stocks.map(stock => <Stock key={ stock.id } stock={ stock } buyStock={ buyStock }/>);
+  const stockArray = stocks.map(stock => <Stock key={ stock.id } stock={ stock } />);
 
   return (
     <div>

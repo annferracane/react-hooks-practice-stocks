@@ -4,10 +4,9 @@ import PortfolioContainer from "./PortfolioContainer";
 import SearchBar from "./SearchBar";
 
 function MainContainer() {
+  
+  function buyStock() {
 
-  function buyStock(e) {
-    e.stopPropagation();
-    console.log(e.target.id);
   }
 
   return (
@@ -15,7 +14,7 @@ function MainContainer() {
       <SearchBar />
       <div className="row">
         <div className="col-8">
-          <StockContainer buyStock={ buyStock }/>
+          <StockContainer />
         </div>
         <div className="col-4">
           <PortfolioContainer buyStock={ buyStock } />

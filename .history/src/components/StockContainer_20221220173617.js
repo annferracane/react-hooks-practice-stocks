@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from "react";
 import Stock from "./Stock";
 
-function StockContainer( { buyStock } ) {
+function StockContainer() {
 
   const baseURL = "http://localhost:3001/stocks";
   const [stocks, setStocks] = useState([]);
@@ -9,16 +9,14 @@ function StockContainer( { buyStock } ) {
   useEffect(() => {
     fetch(baseURL)
     .then(resp => resp.json())
-    .then(stocks => setStocks(stocks))
-    .catch(e => console.log(e));
-  },[]);
-
-  const stockArray = stocks.map(stock => <Stock key={ stock.id } stock={ stock } buyStock={ buyStock }/>);
+    .then(data => setStocks(stocks))
+    .catch()
+  })
 
   return (
     <div>
       <h2>Stocks</h2>
-      { stockArray }
+      {/* render stock list here*/}
     </div>
   );
 }

@@ -6,8 +6,8 @@ import SearchBar from "./SearchBar";
 function MainContainer() {
 
   function buyStock(e) {
-    e.stopPropagation();
-    console.log(e.target.id);
+    e.stopPropo
+    console.log(e.target);
   }
 
   return (
